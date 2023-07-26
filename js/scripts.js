@@ -17,14 +17,11 @@ let pokemonList = [
 	}
 ];
 
-//write the pokemon name and height in the DOM and highlight one
-
-for (i=0; i < pokemonList.length; i++) {
-	if (pokemonList[i].height > 7){
-		document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') - Wow, that\’s big!' + '<br>');
+// forEach() function to iterarte over the pokemon list
+pokemonList.forEach(function(pokemon) {
+	if (pokemon.height > 7){
+		document.write(pokemon.name + ' (height: ' + pokemon.height + ') - Wow, that\’s big!' + '<br>');
 	} else {
-		document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + '<br>');
+		document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + '<br>');
 	}
-}
-
-
+});
