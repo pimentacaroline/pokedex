@@ -1,9 +1,16 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: var(--regularFont);
+  font-size: var(--textFontSize);
+  line-height: var(--lineHeightS);
+}
+
 .pokemon-list {
 	list-style-type: none;
 }
 
 .pokemon-button {
-	background-color: #6c0564; 
+	background-color: #870a7c; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -14,3 +21,6 @@
 	margin: 4px;
 }
 
+h1 {
+	margin-left: 44px;
+}
