@@ -83,7 +83,7 @@ let pokemonRepository = (function () {
 
 				// create content with the pokemon types
 				let typesElement = document.createElement('p');
-				typesElement.innerText = 'Type: ' + pokemon.types[0];
+				typesElement.innerText = 'Type: ' + pokemon.types.join(', ');
 
 				// create image element
 				let imageElement = document.createElement('img');
