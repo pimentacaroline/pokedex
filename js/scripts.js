@@ -75,6 +75,7 @@ let pokemonRepository = (function () {
 			let modalBody = $(".modal-body");
 			let modalTitle = $(".modal-title");
 			let modalHeader = $(".modal-header");
+			let modalFooter = $ (".modal-footer");
 			modalTitle.empty();
 			modalBody.empty();
 	
@@ -89,6 +90,7 @@ let pokemonRepository = (function () {
 			let typesElement = $("<p>" + "Types : " + item.types.join(', ') + "</p>");
 			let abilitiesElement = $("<p>" + "Abilities : " + item.abilities.join(', ') + "</p>");
 	
+
 			modalTitle.append(nameElement);
 			modalBody.append(imageElementFront);
 			modalBody.append(imageElementBack);
