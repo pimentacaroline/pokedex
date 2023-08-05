@@ -1,26 +1,19 @@
+nav {
+  margin-top: 25px;
+  margin-bottom: 100px;
+  text-align:center;
+
+}
+
+footer{
+  margin-top: 50px;
+}
 .btn:focus {
 border-color: none;
 }
 /* ----------------- Modal ------------------- */
 .capitalize-first-letter {
   text-transform: capitalize;
-}
-
-.next-button,
-.previous-button {
-  display: inline-block;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  padding: 8px 16px;
-}
-
-.next-button:hover,
-.previous-button:hover {
-  background-color: #e3350d;
-  color: #fff;
-  font-weight: 600;
 }
 
 .navContainer {

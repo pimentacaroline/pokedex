@@ -16,21 +16,22 @@
 </head>
 
 <body>
+
   <!-- Nav Bar -->
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-  </nav>
-  <!-- Page title -->
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1 class="display-4 text-center">Pokédex</h1>
-      </div>
+  <nav class="navbar navbar-light" style="background-color: #FFF;">
+    <div class="container d-flex justify-content-center">
+      <a class="navbar-brand" href="#">
+        <img src="img/pokedexlogo.svg"  alt="logo">
+      </a> 
     </div>
-  </div>
+  </nav>
 
   <!-- Pokemons list -->
-  <ul class="pokemon-list list-unstyled list-group-item"></ul>
+  <div class="container">
+    <ul class="pokemon-list row"></ul>
+  </div>
+
+
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -49,6 +50,21 @@
       </div>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer class="footer py-3 d-flex"  style="background-color: #000; color:#fff;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 ">
+          <p class="text-center">&copy; Caroline Pimenta</p>
+          <p class="text-center">Visit my<a href="https://github.com/pimentacaroline/pokedex" style="color:#e3350d" target="_blank"> GitHub </a>to learn more about this website</p>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
 
   <!-- importedscripts: jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"

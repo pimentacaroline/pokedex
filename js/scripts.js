@@ -18,16 +18,16 @@ let pokemonRepository = (function () {
 			let listItem = document.createElement('li');
 			let button = document.createElement('button');
 			
+			listItem.classList.add('list-group-item', 'col-sm-4', 'col-lg-2');
 			button.innerText = pokemon.name;
-			button.classList.add('.btn', '.btn-primary');
+			button.classList.add('btn', 'btn-primary');
 			button.setAttribute('data-toggle', 'modal');
 			button.setAttribute('data-target', '#exampleModal');
 			button.addEventListener('click', function(event) {
 				showDetails(pokemon);
 			})
-			
+
 			listItem.appendChild(button);
-			listItem.classList.add('.list-group-item');
 			pokemonList.appendChild(listItem);
 		}
 
