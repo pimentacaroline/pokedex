@@ -17,7 +17,7 @@ let pokemonRepository = (function () {
 			let pokemonList = document.querySelector('.pokemon-list');
 			let listItem = document.createElement('li');
 			let button = document.createElement('button');
-			
+						
 			listItem.classList.add('list-group-item', 'col-sm-4', 'col-lg-2');
 			button.innerText = pokemon.name;
 			button.classList.add('btn', 'btn-primary', 'btn-block', 'capitalize-first-letter');
@@ -72,33 +72,47 @@ let pokemonRepository = (function () {
 
 		//show the modal content
 		function showModal(item) {
-			let modalBody = $(".modal-body");
-			let modalTitle = $(".modal-title");
-			let modalHeader = $(".modal-header");
-			let modalFooter = $ (".modal-footer");
-			modalTitle.empty();
-			modalBody.empty();
+			let modalBody = document.querySelector(".modal-body");
+			let modalTitle = document.querySelector(".modal-title");
+			let modalHeader = document.querySelector(".modal-header");
+			let modalFooter = document.querySelector(".modal-footer");
+			modalTitle.innerHTML = "";
+			modalBody.innerHTML = "";
 	
-			let nameElement = $("<h1>" + item.name + "</h1>");
-			nameElement.addClass("capitalize-first-letter");
-			let imageElementFront = $('<img class="modal-img" style="width:50%">');
-			imageElementFront.attr("src", item.imageUrlFront);
-			let imageElementBack = $('<img class="modal-img" style="width:50%">');
-			imageElementBack.attr("src", item.imageUrlBack);
-			let heightElement = $("<p>" + "Height : " + item.height + "</p>");
-			let weightElement = $("<p>" + "Weight : " + item.weight + "</p>");
-			let typesElement = $("<p>" + "Types : " + item.types.join(', ') + "</p>");
-			let abilitiesElement = $("<p>" + "Abilities : " + item.abilities.join(', ') + "</p>");
-	
-
-			modalTitle.append(nameElement);
-			modalBody.append(imageElementFront);
-			modalBody.append(imageElementBack);
-			modalBody.append(heightElement);
-			modalBody.append(weightElement);
-			modalBody.append(typesElement);
-			modalBody.append(abilitiesElement);
-		}
+			let nameElement = document.createElement("h1");
+  nameElement.textContent = item.name;
+  nameElement.classList.add("capitalize-first-letter");
+  
+  let imageElementFront = document.createElement("img");
+  imageElementFront.classList.add("modal-img");
+  imageElementFront.style.width = "50%";
+  imageElementFront.src = item.imageUrlFront;
+  
+  let imageElementBack = document.createElement("img");
+  imageElementBack.classList.add("modal-img");
+  imageElementBack.style.width = "50%";
+  imageElementBack.src = item.imageUrlBack;
+  
+  let heightElement = document.createElement("p");
+  heightElement.textContent = "Height : " + item.height;
+  
+  let weightElement = document.createElement("p");
+  weightElement.textContent = "Weight : " + item.weight;
+  
+  let typesElement = document.createElement("p");
+  typesElement.textContent = "Types : " + item.types.join(", ");
+  
+  let abilitiesElement = document.createElement("p");
+  abilitiesElement.textContent = "Abilities : " + item.abilities.join(", ");
+  
+  modalTitle.appendChild(nameElement);
+  modalBody.appendChild(imageElementFront);
+  modalBody.appendChild(imageElementBack);
+  modalBody.appendChild(heightElement);
+  modalBody.appendChild(weightElement);
+  modalBody.appendChild(typesElement);
+  modalBody.appendChild(abilitiesElement);
+}
 
 		return {
 			add: add,
