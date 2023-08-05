@@ -16,8 +16,9 @@ footer{
 }
 
 .btn-primary:hover,
-.btn-primary:active {
-  background-color: #e3350d;
+.btn-primary:active
+.btn-primary:focus {
+  background-color: #e3350d !important;
   color: #fff;
 }
 
