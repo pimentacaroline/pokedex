@@ -20,7 +20,7 @@ let pokemonRepository = (function () {
 			
 			listItem.classList.add('list-group-item', 'col-sm-4', 'col-lg-2');
 			button.innerText = pokemon.name;
-			button.classList.add('btn', 'btn-primary');
+			button.classList.add('btn', 'btn-primary', 'btn-block', 'capitalize-first-letter');
 			button.setAttribute('data-toggle', 'modal');
 			button.setAttribute('data-target', '#exampleModal');
 			button.addEventListener('click', function(event) {

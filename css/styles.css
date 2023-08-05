@@ -1,6 +1,7 @@
+
 nav {
   margin-top: 25px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   text-align:center;
 
 }
@@ -8,9 +9,19 @@ nav {
 footer{
   margin-top: 50px;
 }
-.btn:focus {
-border-color: none;
+
+.btn-primary {
+  background-color: #000;
+  border: none;
 }
+
+.btn-primary:hover {
+  background-color: #e3350d;
+  color: #fff;
+}
+
+
+
 /* ----------------- Modal ------------------- */
 .capitalize-first-letter {
   text-transform: capitalize;
