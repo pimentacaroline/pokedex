@@ -1,17 +1,9 @@
-
-nav {
-  margin-top: 25px;
-  margin-bottom: 50px;
-  text-align:center;
-
-}
-
 #logo {
   margin: 50px 0px;
 
 }
 
-footer{
+footer {
   margin-top: 50px;
 }
 
@@ -26,7 +18,6 @@ footer{
   background-color: #e3350d !important;
   color: #fff;
 }
-
 
 .btn-primary:focus {
   box-shadow: 0 0 0 0.25rem rgba(227, 53, 13, 0.5);

@@ -1,4 +1,4 @@
-// list of pokemons loaded from an API
+// load pokemons from an API
 let pokemonRepository = (function () {
 
 	let pokemonList = [];
