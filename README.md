@@ -19,5 +19,5 @@ I plan to return to this project in the next months and add two more features: a
 - Repository: https://github.com/pimentacaroline/pokedex
 - Deployment: https://pimentacaroline.github.io/pokedex/
 
-## Screenshots
+## Screenshot
 ![Desktop screenshot](img/screenshot.png)
