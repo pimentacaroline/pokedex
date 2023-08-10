@@ -1,10 +1,8 @@
-#logo {
-  margin: 50px 0px;
-
-}
-
 footer {
   margin-top: 50px;
+}
+header {
+  padding: 50px;
 }
 
 .btn-primary {
@@ -34,3 +32,16 @@ footer {
   justify-content: space-between;
 }
 
+#logo {
+  max-width: 300px;
+  padding: 0;
+}
+
+.form-control {
+  max-width: 200px;
+}
+
+.input-group {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
