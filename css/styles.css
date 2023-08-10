@@ -38,7 +38,7 @@ header {
 }
 
 .form-control {
-  max-width: 200px;
+  max-width: 200px !important;
 }
 
 .input-group {
