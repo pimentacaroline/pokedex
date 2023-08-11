@@ -13,6 +13,24 @@ let pokemonRepository = (function () {
 		return pokemonList;
 	}
 
+	// Create a search bar element.
+	const searchBar = document.querySelector(".search-bar");
+	// Add a keyup event listener to the search bar.
+	searchBar.addEventListener("input", (event) => {
+			// Get the search string from the user input.
+			const searchString = event.target.value.toLowerCase();
+
+			// Filter the API generated list based on the search string.
+			const filteredList = pokemonList.filter((item) => {
+					return item.name.toLowerCase().includes(searchString);
+			});
+			// Update the list of items in the DOM.
+			document.querySelector(".pokemon-list").innerHTML = "";
+			filteredList.forEach((item) => {
+					addListItem(item);
+			});
+	});
+
 	function addListItem(pokemon) {
 		let pokemonList = document.querySelector('.pokemon-list');
 		let listItem = document.createElement('li');
