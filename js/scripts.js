@@ -1,7 +1,9 @@
+let currentPage = 1;
 // load pokemons from an API
 let pokemonRepository = (function () {
 
 	let pokemonList = [];
+
 
 	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
@@ -56,10 +58,18 @@ let pokemonRepository = (function () {
 		});
 	}
 
+	//Function that will load the pokemons
+	let itemsPerPage = 15;
+	
 	function loadList() {
-		return fetch(apiUrl).then(function (response) {
+		let offset = (currentPage - 1) * itemsPerPage;
+		let apiUrl = `https://pokeapi.co/api/v2/pokemon/?limit=${itemsPerPage}&offset=${offset}`;
+
+		return fetch(apiUrl)
+		.then(function (response) {
 			return response.json();
-		}).then(function (json) {
+		})
+		.then(function (json) {
 			json.results.forEach(function (item) {
 				let pokemon = {
 					name: item.name,
@@ -67,9 +77,25 @@ let pokemonRepository = (function () {
 				};
 				add(pokemon);
 			});
-		}).catch(function (e) {
+		})
+		.catch(function (e) {
 			console.error(e);
 		})
+	}
+
+	function loadListAndDisplay() {
+		if (currentPage === 1) {
+			// Clear the existing list only when loading the first page
+			document.querySelector(".pokemon-list").innerHTML = "";
+		}
+	
+		// Fetch the current page of Pokémon
+		return pokemonRepository.loadList().then(function () {
+			// Display the Pokémon for the current page
+			pokemonRepository.getAll().forEach(function (pokemon) {
+				pokemonRepository.addListItem(pokemon);
+			});
+		});
 	}
 
 	//items(elements) that will be loaded from API
@@ -138,11 +164,25 @@ let pokemonRepository = (function () {
 		loadList: loadList,
 		loadDetails: loadDetails,
 		showDetails: showDetails,
+		loadListAndDisplay: loadListAndDisplay,
 	};
 })();
 
-pokemonRepository.loadList().then(function () {
-	pokemonRepository.getAll().forEach(function (pokemon) {
-		pokemonRepository.addListItem(pokemon);
-	});
+
+// Call the loadListAndDisplay function to display the initial 15 Pokémon
+pokemonRepository.loadListAndDisplay();
+
+// Add the event listener using currentPage
+document.getElementById("loadMoreBtn").addEventListener("click", function () {
+  currentPage++;
+  console.log("Load More clicked, currentPage:", currentPage);
+
+  pokemonRepository.loadList().then(function () {
+    console.log("Fetched data for page:", currentPage);
+
+    pokemonRepository.getAll().forEach(function (pokemon) {
+      console.log("Adding:", pokemon.name);
+      pokemonRepository.addListItem(pokemon);
+    });
+  });
 });
