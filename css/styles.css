@@ -4,21 +4,14 @@ html {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.wrapper {
-  flex: 1;
+  margin-bottom: 60px;
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 120px;
-  background-color: #000;
-  color: #fff;
 }
 
 header {
@@ -39,17 +32,6 @@ header {
 
 .btn-primary:focus {
   box-shadow: 0 0 0 0.25rem rgba(227, 53, 13, 0.5);
-}
-
-.btn-secondary{
-  background-color: #e3350d;
-  color: #fff;
-  border: none;
-}
-
-.btn-primary:active,
-.btn-secondary:focus{
-  background-color: #e3350d !important;
 }
 
 .capitalize-first-letter {
@@ -75,17 +57,4 @@ header {
 .input-group {
   margin-top: 25px;
   margin-bottom: 50px;
-}
-
-#loadMoreBtn {
-  margin-bottom: 50px;
-}
-
-.custom-list-style {
-  list-style: none; 
-  padding: 0; 
-}
-
-.custom-list-style li {
-  border: none;
 }
