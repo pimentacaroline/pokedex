@@ -3,7 +3,7 @@ let pokemonRepository = (function () {
 
 	let pokemonList = [];
 
-	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=60';
 
 	function add(pokemon) {
 		pokemonList.push(pokemon);
@@ -36,7 +36,7 @@ let pokemonRepository = (function () {
 		let listItem = document.createElement('li');
 		let button = document.createElement('button');
 
-		listItem.classList.add('list-group-item', 'col-sm-4', 'col-lg-2');
+		listItem.classList.add('list-group-item', 'col-sm-4', 'col-lg-3');
 		button.innerText = pokemon.name;
 		button.classList.add('btn', 'btn-primary', 'btn-block', 'capitalize-first-letter');
 		button.setAttribute('data-toggle', 'modal');
