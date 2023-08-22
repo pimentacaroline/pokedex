@@ -13,8 +13,6 @@ It was required for the learning process that I used the Bootstrap framework in 
 - Display the first 150 Pokemons ordered by their ID
 - On user action (e.g., by clicking on a list item), display details for that item
 
-I plan to return to this project in the next months and add two more features: a search input field and a filter.
-
 ## Links
 - Repository: https://github.com/pimentacaroline/pokedex
 - Deployment: https://pimentacaroline.github.io/pokedex/
